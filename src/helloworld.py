@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from dotenv import load_dotenv
-import os
+from os import environ
 from sys import argv
 from openai import OpenAI
 
@@ -9,13 +9,13 @@ load_dotenv()
 
 client = OpenAI(
     # This is the default and can be omitted
-    api_key=os.environ.get("OPEN_API_TOKEN"),
+    api_key=environ.get("OPEN_API_TOKEN"),
 )
 
 chat_completion = client.chat.completions.create(
     messages=[
         {
-            "role": "system",            
+            "role": "system",
             "content": "provide me unicode art"
         },
         {
@@ -34,4 +34,3 @@ chat_completion = client.chat.completions.create(
 #     print(argv)
 
 print(chat_completion.choices[0].message.content)
-
