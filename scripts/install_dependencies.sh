@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 project=learn-german
 python_version=3.12.3
