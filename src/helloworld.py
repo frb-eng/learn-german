@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 
+from dotenv import load_dotenv
 import os
 from sys import argv
 from openai import OpenAI
+
+load_dotenv()
 
 client = OpenAI(
     # This is the default and can be omitted

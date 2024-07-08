@@ -4,9 +4,9 @@
 
 # Environment setup
 
-- Install dependencies required for python:
+- Install dependencies required for python ([source](https://github.com/pyenv/pyenv/blob/master/.github/workflows/ubuntu_build.yml#L26)):
 
-`sudo apt-get update && sudo apt-get install build-essential sqlite3`
+`sudo apt-get update && sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev`
 
 - Install pyenv:
 
@@ -16,11 +16,11 @@
 
 `echo -e 'export PYENV_ROOT="$HOME/.pyenv"\nexport PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc`
 
-`echo -e 'eval "$(pyenv init --path)"\neval "$(pyenv init -)"' >> ~/.bashrc`
+`echo -e 'eval "$(pyenv init --path)"\neval "$(pyenv init -)"\neval "$(pyenv virtualenv-init -)"' >> ~/.bashrc`
 
-- Set up OpenAI token:
+- Set up OpenAI token using https://platform.openai.com/api-keys:
 
-`echo -e 'export OPEN_API_TOKEN="YOUR OPEN API TOKEN"' >> ~/.bashrc`
+`echo -e 'export OPEN_API_TOKEN="YOUR OPEN API TOKEN"' >> .env`
 
 - Refresh shell:
 
@@ -28,7 +28,7 @@
 
 - Install dependencies:
 
-`./scripts/install_dependencies.sh`
+`scripts/install_dependencies.sh`
 
 - Execute:
 
