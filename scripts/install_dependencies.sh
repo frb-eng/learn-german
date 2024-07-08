@@ -9,6 +9,8 @@ if ! pyenv virtualenvs | grep -q "$project"; then
     pyenv local $project
 fi
 
-pyenv activate $project
+. ${PYENV_ROOT}/versions/${project}/bin/activate
+
+python -m pip install --upgrade pip
 
 pip install -r requirements.txt
