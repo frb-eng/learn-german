@@ -33,3 +33,5 @@
 - Execute:
 
 `python ./src/helloworld.py "Your query"`
+
+# [Open AI pricing](https://openai.com/api/pricing/)
