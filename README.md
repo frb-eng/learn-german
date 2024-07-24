@@ -1,4 +1,4 @@
-# learn-german
+# try OpenAI API
 
 ![A test image](image.png)
 

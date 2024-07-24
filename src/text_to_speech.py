@@ -11,9 +11,9 @@ client = OpenAI(
     api_key=environ.get("OPEN_API_TOKEN"),
 )
 
-makedirs("speech", exist_ok=True)
+makedirs("speeches", exist_ok=True)
 
-speech_file_path = "speech/speech.mp3"
+speech_file_path = "speeches/speech.mp3"
 response = client.audio.speech.create(
   model="tts-1",
   voice="alloy",
